@@ -37,12 +37,12 @@ CREATE TABLE auditorias (
 );
 
 --Datos Iniciales--
-insert into "Taller5".clientes (identificacion, nombre, edad, correo) values ('1', 'Santi', 20, 'santi@example');
-insert into "Taller5".clientes (identificacion, nombre, edad, correo) values ('2', 'Manuel', 22, 'manuel@example');
-insert into "Taller5".productos (codigo, nombre, stock, valor_unitario) values ('1', 'Chocolate', 4, 4000);
-insert into "Taller5".productos (codigo, nombre, stock, valor_unitario) values ('2', 'Manzana', 10, 500);
-insert into "Taller5".facturas (id, fecha, cantidad, valor_total,pedido_estado, producto_id, cliente_id) values ('1', '2024/04/04', 10, 48000, 'PENDIENTE', '1', '1');
-insert into "Taller5".facturas (id, fecha, cantidad, valor_total,pedido_estado, producto_id, cliente_id) values ('2', '2024/04/04', 12, 48000, 'PENDIENTE', '2', '2');
+insert into "taller5".clientes (identificacion, nombre, edad, correo) values ('1', 'Santi', 20, 'santi@example');
+insert into "taller5".clientes (identificacion, nombre, edad, correo) values ('2', 'Manuel', 22, 'manuel@example');
+insert into "taller5".productos (codigo, nombre, stock, valor_unitario) values ('1', 'Chocolate', 4, 4000);
+insert into "taller5".productos (codigo, nombre, stock, valor_unitario) values ('2', 'Manzana', 10, 500);
+insert into "taller5".facturas (id, fecha, cantidad, valor_total,pedido_estado, producto_id, cliente_id) values ('1', '2024/04/04', 10, 48000, 'PENDIENTE', '1', '1');
+insert into "taller5".facturas (id, fecha, cantidad, valor_total,pedido_estado, producto_id, cliente_id) values ('2', '2024/04/04', 12, 48000, 'PENDIENTE', '2', '2');
 
 -- Procedimiento almacenado Calcular stock total
 CREATE OR REPLACE PROCEDURE calcular_stock_total()
@@ -67,7 +67,7 @@ CALL calcular_stock_total();
 
 
 -- Procedimiento almacenado generar_auditoria
-CREATE OR REPLACE PROCEDURE generar_auditoria(
+CREATE OR REPLACE PROCEDURE "taller5".generar_auditoria(
 	p_fecha_inicio DATE,
 	p_fecha_final DATE
 )
@@ -78,19 +78,19 @@ DECLARE
 	v_id_factura VARCHAR;
 	v_pedido_estado_factura estados;
 BEGIN
-	FOR v_fecha_factura, v_id_factura, v_pedido_estado_factura IN SELECT fecha, id, pedido_estado FROM facturas
+	FOR v_fecha_factura, v_id_factura, v_pedido_estado_factura IN SELECT fecha, id, pedido_estado FROM "taller5".facturas
 	LOOP
 		IF v_fecha_factura BETWEEN p_fecha_inicio AND p_fecha_final THEN 
-			insert into "Taller5".auditorias (fecha_inicio, fecha_final, factura_id, pedido_estado) values (p_fecha_inicio, p_fecha_final, v_id_factura, v_pedido_estado_factura);
+			insert into "taller5".auditorias (fecha_inicio, fecha_final, factura_id, pedido_estado) values (p_fecha_inicio, p_fecha_final, v_id_factura, NULL);
 		END IF;	
 	END LOOP;
 END;
 $$;
 
-CALL generar_auditoria('2024-03-03','2024-05-05'); 	 
+CALL generar_auditoria('2024-08-03','2024-10-05'); 	 
 
 -- Procedimiento almacenado simular ventas mes
-CREATE OR REPLACE PROCEDURE simular_ventas_mes()
+CREATE OR REPLACE PROCEDURE "taller5".simular_ventas_mes()
 LANGUAGE plpgsql
 AS $$
 DECLARE 
@@ -100,10 +100,10 @@ DECLARE
 	v_cantidad INTEGER := 1;
 BEGIN 
 	WHILE v_dia <= 30 LOOP
-		FOR v_identificacion IN SELECT identificacion FROM clientes 
+		FOR v_identificacion IN SELECT identificacion FROM "taller5".clientes 
 		LOOP 
 			v_cantidad= random()* (30 - 1) + 1;
-			INSERT INTO "Taller5".facturas (id, fecha, cantidad, valor_total,pedido_estado, producto_id, cliente_id) values (CAST(v_id AS varchar), '2024-09-02', v_cantidad, 1000, 'PENDIENTE', '1', v_identificacion );
+			INSERT INTO "taller5".facturas (id, fecha, cantidad, valor_total,pedido_estado, producto_id, cliente_id) values (CAST(v_id AS varchar), '2024-09-02', v_cantidad, 1000, 'PENDIENTE', '1', v_identificacion );
 			v_id := v_id+1;
 		END LOOP;
 		v_dia := v_dia +1;
