@@ -1,0 +1,263 @@
+
+[
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10b8"},
+      "ISBN":"1",
+      "Titulo":"Satanás",
+      "NombreAutor":"Mario Mendoza",
+      "Genero":"Ficción",
+      "Año":2017
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10b9" },
+      "ISBN": "2",
+      "Titulo": "Cien años de soledad",
+      "NombreAutor": "Gabriel García Márquez",
+      "Genero": "Realismo Mágico",
+      "Año": 1967
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10ba" },
+      "ISBN": "3",
+      "Titulo": "Rayuela",
+      "NombreAutor": "Julio Cortázar",
+      "Genero": "Ficción",
+      "Año": 1963
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10bb" },
+      "ISBN": "4",
+      "Titulo": "1984",
+      "NombreAutor": "George Orwell",
+      "Genero": "Distopía",
+      "Año": 1949
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10bc" },
+      "ISBN": "5",
+      "Titulo": "El amor en los tiempos del cólera",
+      "NombreAutor": "Gabriel García Márquez",
+      "Genero": "Romance",
+      "Año": 1985
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10bd" },
+      "ISBN": "6",
+      "Titulo": "Don Quijote de la Mancha",
+      "NombreAutor": "Miguel de Cervantes",
+      "Genero": "Aventura",
+      "Año": 1605
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10be" },
+      "ISBN": "7",
+      "Titulo": "Crimen y castigo",
+      "NombreAutor": "Fiódor Dostoyevski",
+      "Genero": "Filosofía",
+      "Año": 1866
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10bf" },
+      "ISBN": "8",
+      "Titulo": "La metamorfosis",
+      "NombreAutor": "Franz Kafka",
+      "Genero": "Ficción",
+      "Año": 1915
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c0" },
+      "ISBN": "9",
+      "Titulo": "Orgullo y prejuicio",
+      "NombreAutor": "Jane Austen",
+      "Genero": "Romance",
+      "Año": 1813
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c1" },
+      "ISBN": "10",
+      "Titulo": "Ulises",
+      "NombreAutor": "James Joyce",
+      "Genero": "Ficción",
+      "Año": 1922
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c2" },
+      "ISBN": "11",
+      "Titulo": "Matar a un ruiseñor",
+      "NombreAutor": "Harper Lee",
+      "Genero": "Drama",
+      "Año": 1960
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c3" },
+      "ISBN": "12",
+      "Titulo": "Fahrenheit 451",
+      "NombreAutor": "Ray Bradbury",
+      "Genero": "Distopía",
+      "Año": 1953
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c4" },
+      "ISBN": "13",
+      "Titulo": "El principito",
+      "NombreAutor": "Antoine de Saint-Exupéry",
+      "Genero": "Ficción",
+      "Año": 1943
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c5" },
+      "ISBN": "14",
+      "Titulo": "Los hermanos Karamázov",
+      "NombreAutor": "Fiódor Dostoyevski",
+      "Genero": "Filosofía",
+      "Año": 1880
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c6" },
+      "ISBN": "15",
+      "Titulo": "El alquimista",
+      "NombreAutor": "Paulo Coelho",
+      "Genero": "Ficción",
+      "Año": 1988
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c7" },
+      "ISBN": "16",
+      "Titulo": "El retrato de Dorian Gray",
+      "NombreAutor": "Oscar Wilde",
+      "Genero": "Ficción",
+      "Año": 1890
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c8" },
+      "ISBN": "17",
+      "Titulo": "La casa de los espíritus",
+      "NombreAutor": "Isabel Allende",
+      "Genero": "Ficción",
+      "Año": 1982
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10c9" },
+      "ISBN": "18",
+      "Titulo": "Memorias de mis putas tristes",
+      "NombreAutor": "Gabriel García Márquez",
+      "Genero": "Romance",
+      "Año": 2004
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10ca" },
+      "ISBN": "19",
+      "Titulo": "Ensayo sobre la ceguera",
+      "NombreAutor": "José Saramago",
+      "Genero": "Ficción",
+      "Año": 1995
+    },
+    {
+      "_id": { "$oid": "671bfaa01c52bd0485cc10cb" },
+      "ISBN": "20",
+      "Titulo": "La ciudad y los perros",
+      "NombreAutor": "Mario Vargas Llosa",
+      "Genero": "Ficción",
+      "Año": 1963
+    },
+    {
+        "filter": { "ISBN": "2" },
+        "update": {
+            "$set": {
+            "Año": 1970,
+            "Genero": "Literatura"
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "3" },
+        "update": {
+            "$set": {
+            "Titulo": "Rayuela (Edición Especial)",
+            "Año": 2010
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "4" },
+        "update": {
+            "$set": {
+            "Genero": "Ciencia Ficción",
+            "NombreAutor": "Eric Arthur Blair"
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "5" },
+        "update": {
+            "$set": {
+            "ISBN": "5A",
+            "Año": 1995
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "7" },
+        "update": {
+            "$set": {
+            "Titulo": "Crimen y Castigo (Edición Completa)",
+            "Genero": "Psicología"
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "10" },
+        "update": {
+            "$set": {
+            "Año": 1923,
+            "NombreAutor": "Joyce James"
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "12" },
+        "update": {
+            "$set": {
+            "Genero": "Ciencia Ficción",
+            "Titulo": "Fahrenheit 451 (Nueva Edición)"
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "15" },
+        "update": {
+            "$set": {
+            "NombreAutor": "Paulo Coelho",
+            "Genero": "Espiritualidad"
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "16" },
+        "update": {
+            "$set": {
+            "ISBN": "16B",
+            "Año": 1891
+            }
+        }
+    },
+    {
+        "filter": { "ISBN": "17" },
+        "update": {
+            "$set": {
+            "Titulo": "La Casa de los Espíritus (Edición Revisada)",
+            "Genero": "Literatura Latinoamericana"
+            }
+        }
+    },
+    { "ISBN": "18" },
+    { "Año": {"$gt" :2000 }},
+    { "Año": {"$lt" :1980 }},
+    { "Año": {"$gte" :2004 }},
+    { "Año": {"$lte" :1983 }},
+    { "Titulo": {"$ne" : "Cien años de soledad" }},
+    { "Genero": {"$in" : ["Ficción","Romance"] }},
+    { "$and": [{"Año": { "$gte": 1985 }}, {"Genero":"Romance"}]},
+    { "$or": [{"Año": { "$lte": 1985 }}, {"Genero":"Romance"}]}
+  ]
+  
