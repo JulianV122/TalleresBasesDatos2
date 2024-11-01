@@ -1,0 +1,187 @@
+[
+    {
+        "ProductoID": 1,
+        "Nombre": "Balón",
+        "Descripcion": "Balón de fútbol",
+        "Precio": 5000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 1,
+                "Texto": "Muy buen balón",
+                "Cliente": "Juan"
+            },
+            {
+                "ComentarioID": 2,
+                "Texto": "Muy malo",
+                "Cliente": "Pedro"
+            }
+        ]
+    },
+    {
+        "ProductoID": 2,
+        "Nombre": "Raqueta",
+        "Descripcion": "Raqueta de tenis",
+        "Precio": 15000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 3,
+                "Texto": "Muy buena raqueta",
+                "Cliente": "María"
+            }
+        ]
+    },
+    {
+        "ProductoID": 3,
+        "Nombre": "Pelota",
+        "Descripcion": "Pelota de tenis",
+        "Precio": 3000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": []
+    },
+    {
+        "ProductoID": 4,
+        "Nombre": "Camiseta",
+        "Descripcion": "Camiseta de fútbol",
+        "Precio": 20000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 4,
+                "Texto": "Muy buena camiseta",
+                "Cliente": "Luis"
+            }
+        ]
+    },
+    {
+        "ProductoID": 5,
+        "Nombre": "Zapatillas",
+        "Descripcion": "Zapatillas de running",
+        "Precio": 25000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 5,
+                "Texto": "Muy buenas zapatillas",
+                "Cliente": "Ana"
+            }
+        ]
+    },
+    {
+        "ProductoID": 6,
+        "Nombre": "Bicicleta",
+        "Descripcion": "Bicicleta de montaña",
+        "Precio": 500000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 6,
+                "Texto": "Muy buena bicicleta",
+                "Cliente": "Carlos"
+            }
+        ]
+    },
+    {
+        "ProductoID": 7,
+        "Nombre": "Balón",
+        "Descripcion": "Balón de baloncesto",
+        "Precio": 10000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 7,
+                "Texto": "Muy buen balón",
+                "Cliente": "Juan"
+            }
+        ]
+    },
+    {
+        "ProductoID": 8,
+        "Nombre": "Balón",
+        "Descripcion": "Balón de voleibol",
+        "Precio": 8000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 8,
+                "Texto": "Muy buen balón",
+                "Cliente": "Juan"
+            }
+        ]
+    },
+    {
+        "ProductoID": 9,
+        "Nombre": "Balón",
+        "Descripcion": "Balón de rugby",
+        "Precio": 12000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 9,
+                "Texto": "Muy buen balón",
+                "Cliente": "Juan"
+            }
+        ]
+    },
+    {
+        "ProductoID": 10,
+        "Nombre": "Balón",
+        "Descripcion": "Balón de fútbol americano",
+        "Precio": 15000,
+        "Categoria": {
+            "CategoriaID": 1,
+            "NombreCategoria": "Deportes"
+        },
+        "Comentarios": [
+            {
+                "ComentarioID": 10,
+                "Texto": "Muy buen balón",
+                "Cliente": "Juan"
+            }
+        ]
+    }
+]
+
+db.Productos.find(
+  {},
+  { "Categoria": 0, "Comentarios": 0 }
+)
+
+
+db.Productos.find(
+  {},
+  { "Comentarios": 0 }
+)
+
+db.Productos.find(
+  {},
+  { "Categoria": 0 }
+)
